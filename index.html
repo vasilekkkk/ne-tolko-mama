@@ -45,8 +45,7 @@ body{background:var(--night);color:var(--ink);font-family:var(--body);overflow:h
 .btn:focus-visible{outline:2px solid var(--glow);outline-offset:2px}
 .btn.main{background:var(--glow);color:#0b1230;border-color:var(--glow);text-align:center;font-weight:600}
 .btn.main:hover{background:#c8d4ff}
-#panel .btn,#panel .btn.main{text-align:left;display:flex;align-items:center;justify-content:space-between;gap:12px}
-#panel .btn.main::after{content:"→";font-size:16px;line-height:1}
+#panel .btn,#panel .btn.main{text-align:center;display:flex;align-items:center;justify-content:center}
 .reply{margin:0;font-family:var(--body);font-weight:400;font-size:16px;line-height:1.55;color:#e4e9ff}
 .hint{position:fixed;right:max(26px,calc(env(safe-area-inset-right,0px) + 16px));bottom:calc(20px + env(safe-area-inset-bottom,0px));
   font-family:var(--body);font-size:12.5px;letter-spacing:.04em;color:#c9d2f5;pointer-events:none;display:flex;gap:8px;align-items:center;opacity:.85}
@@ -596,24 +595,24 @@ const _up=new THREE.Vector3(0,1,0);
 function addLeaf(parent,geo,pos,dir,scale,mat,roll){ const m=new THREE.Mesh(geo,mat); m.position.copy(pos);
   m.quaternion.setFromUnitVectors(_up,dir.clone().normalize()); m.rotateY(roll); m.scale.setScalar(scale); m.castShadow=true; parent.add(m); return m; }
 /* деревце в горшке: ствол, ветки, листья растут вдоль веток */
+/* комнатные растения: горшок с ободком и пышный куст из крупных листьев на черенках */
+const BIGLEAF=leafGeo(.2,.085);
+function potBase(g,r){ const potM=M(0xd9d4cc,{roughness:.8});
+  mesh(new THREE.CylinderGeometry(.17,.13,.32,40,1,true),potM,0,.16,0,g).material.side=THREE.DoubleSide;
+  mesh(new THREE.CircleGeometry(.13,40),potM,0,.002,0,g,false).rotation.x=-Math.PI/2;
+  const rim=mesh(new THREE.TorusGeometry(.168,.014,10,48),potM,0,.32,0,g); rim.rotation.x=Math.PI/2;
+  const soil=mesh(new THREE.CircleGeometry(.158,40),soilMat,0,.29,0,g,false); soil.rotation.x=-Math.PI/2; }
 function tree(x,z,s=1,seed=1){ const g=new THREE.Group(); g.position.set(x,0,z); g.scale.setScalar(s); scene.add(g); const r=rnd(seed*97);
-  cyl(.17,.13,.32,pot,0,.16,0,g,32); cyl(.158,.158,.02,soilMat,0,.31,0,g,32);
-  const top=new THREE.Vector3((r()-.5)*.08,1.25,(r()-.5)*.08);
-  const trunk=new THREE.CatmullRomCurve3([new THREE.Vector3(0,.3,0),new THREE.Vector3(.02,.7,-.01),top]);
-  g.add(new THREE.Mesh(new THREE.TubeGeometry(trunk,20,.014,8,false),barkMat));
-  const branches=[trunk];
-  for(let b=0;b<6;b++){ const t=.38+b*.1+r()*.05, p0=trunk.getPointAt(Math.min(t,.95)), a=b*2.4+r()*.6, len=.24+r()*.16;
+  potBase(g,r); const mats=[leafA,leafB,leafC], stemM=M(0x4c6345,{roughness:.8});
+  const N=34;
+  for(let k=0;k<N;k++){ const a=k*2.399+r()*.3, h=.55+Math.pow(r(),.8)*1.0, lean=.1+r()*.32;
     const out=new THREE.Vector3(Math.cos(a),0,Math.sin(a));
-    const p1=p0.clone().add(out.clone().multiplyScalar(len*.5)).add(new THREE.Vector3(0,len*.45,0));
-    const p2=p0.clone().add(out.clone().multiplyScalar(len)).add(new THREE.Vector3(0,len*.55-.03,0));
-    const c=new THREE.CatmullRomCurve3([p0,p1,p2]); g.add(new THREE.Mesh(new THREE.TubeGeometry(c,10,.006,6,false),barkMat)); branches.push(c); }
-  const mats=[leafA,leafB,leafC];
-  branches.forEach((c,bi)=>{ const n=bi?11:8;
-    for(let k=0;k<n;k++){ const t=(bi?.25:.55)+k/n*(bi?.75:.45), p=c.getPointAt(Math.min(t,1)), tan=c.getTangentAt(Math.min(t,1));
-      let side=new THREE.Vector3().crossVectors(tan,_up); if(side.lengthSq()<1e-4) side.set(1,0,0); side.normalize();
-      const dir=tan.clone().multiplyScalar(.7).add(side.multiplyScalar(k%2?1:-1)).add(new THREE.Vector3(0,.15,0));
-      addLeaf(g,OLIVE,p,dir,.8+r()*.45,mats[Math.floor(r()*3)],(r()-.5)*1.2); }
-    const tip=c.getPointAt(1), tt=c.getTangentAt(1); addLeaf(g,OLIVE,tip,tt.clone().add(new THREE.Vector3(0,.3,0)),1,leafB,0); }); }
+    const p0=new THREE.Vector3((r()-.5)*.06,.29,(r()-.5)*.06);
+    const p1=p0.clone().add(out.clone().multiplyScalar(lean*.35)).add(new THREE.Vector3(0,h*.55,0));
+    const p2=p0.clone().add(out.clone().multiplyScalar(lean)).add(new THREE.Vector3(0,h,0));
+    const c=new THREE.CatmullRomCurve3([p0,p1,p2]); g.add(new THREE.Mesh(new THREE.TubeGeometry(c,8,.0045,5,false),stemM));
+    const tan=c.getTangentAt(1); const dir=tan.clone().multiplyScalar(.6).add(out.clone().multiplyScalar(.9)).add(new THREE.Vector3(0,-.15+r()*.3,0));
+    addLeaf(g,BIGLEAF,p2,dir,.85+r()*.5,mats[Math.floor(r()*3)],(r()-.5)*.9); } }
 tree(-2.05,-2.62,1.05,1); tree(-4.6,-.7,.95,2); tree(-1.5,-2.72,.62,3);
 cyl(.2,.17,.36,wicker,-4.55,.18,-1.35,scene,24); for(let i=0;i<3;i++) cyl(.032,.032,.55,white,-4.6+i*.065,.48,-1.35+(i%2)*.05,scene,8).rotation.z=.15*(i-1);
 
@@ -826,7 +825,7 @@ const trees=[];
   [[.9,1.9,.55],[-.8,2.1,-.4],[.3,2.5,-.7]].forEach(([bx,by,bz])=>{ const c=new THREE.CatmullRomCurve3([new THREE.Vector3(0,by-.5,0),new THREE.Vector3(bx*.5,by+.1,bz*.5),new THREE.Vector3(bx,by+.6,bz)]);
     g.add(new THREE.Mesh(new THREE.TubeGeometry(c,8,.04,6,false),bark)); });
   /* крона: одна мягкая неровная форма вместо горки шаров */
-  const cg=new THREE.IcosahedronGeometry(1.25,4), cp=cg.attributes.position, v=new THREE.Vector3();
+  const cg=new THREE.SphereGeometry(1.25,40,28), cp=cg.attributes.position, v=new THREE.Vector3();
   for(let k=0;k<cp.count;k++){ v.fromBufferAttribute(cp,k); const n=Math.sin(v.x*2.3+i)*.09+Math.sin(v.y*3.1+i*2)*.07+Math.sin(v.z*2.7)*.08;
     v.multiplyScalar(1+n); v.y*=.88; cp.setXYZ(k,v.x,v.y,v.z); } cg.computeVertexNormals();
   const crownMat=M(0x1f2e2c,{roughness:.9});
