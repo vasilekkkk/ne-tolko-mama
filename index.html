@@ -118,44 +118,7 @@ body{background:var(--night);color:var(--ink);font-family:var(--body);overflow:h
 .sf-st.ok{color:#e8eeff;border-left:2px solid var(--glow);padding-left:12px}
 .sf-st.err{color:#ffc9c9}
 .topnav{transition:opacity .4s}
-.pl-legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:30px;font-size:13px;color:#c9d0e6}
-.pl-legend span{display:inline-flex;align-items:center;gap:7px}
 .pi{width:18px;height:18px;fill:none;stroke:var(--ic,#dfe6ff);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 4px color-mix(in srgb,var(--ic,#aebfff) 60%,transparent));flex:none}
-.pl-wrap{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:16px;margin-top:20px;align-items:start}
-.pl-cal,.pl-side{border:1px solid var(--frame);background:rgba(8,12,27,.55);padding:18px;min-width:0}
-.pl-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-.pl-month{font-family:var(--title);font-weight:800;font-size:22px}
-.pl-arrow{font:inherit;font-size:22px;line-height:1;width:38px;height:38px;color:var(--ink);background:none;border:1px solid rgba(226,232,255,.28);cursor:pointer}
-.pl-arrow:hover{border-color:var(--glow)}
-.pl-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
-.pl-wd{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:center;padding:4px 0 6px}
-.pl-day{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-height:72px;padding:6px;font:inherit;color:var(--ink);background:rgba(3,6,16,.5);border:1px solid rgba(226,232,255,.12);cursor:pointer;text-align:left;min-width:0;transition:border-color .2s,background .2s}
-.pl-day:hover{border-color:rgba(174,191,255,.5)}
-.pl-day.sel{border-color:var(--glow);background:rgba(174,191,255,.1);box-shadow:0 0 16px rgba(140,160,255,.2)}
-.pl-day.now .pl-n{color:#0b1230;background:var(--glow);padding:0 5px}
-.pl-day.has-note::after{content:"";position:absolute;right:6px;top:8px;width:5px;height:5px;border-radius:50%;background:#aebfff}
-.pl-n{font-size:12.5px;font-variant-numeric:tabular-nums;color:#c9d0e6}
-.pl-ics{display:flex;flex-wrap:wrap;gap:3px}.pl-ics .pi{width:17px;height:17px;fill:var(--ic);fill-opacity:.3}
-.pl-count{margin:14px 0 0;font-size:13.5px;color:#c9d0e6}
-.pl-day-title{font-family:var(--title);font-weight:800;font-size:19px;margin-bottom:12px;text-transform:none}
-.pl-day-title::first-letter{text-transform:uppercase}
-.pl-toggles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
-.pl-tg{display:flex;align-items:center;gap:8px;font:inherit;font-size:13px;color:#c9d0e6;background:transparent;border:1px solid rgba(226,232,255,.2);padding:9px 10px;cursor:pointer;text-align:left;min-width:0;transition:border-color .2s,background .2s,color .2s}
-.pl-tg span{min-width:0}
-.pl-tg.on{color:#fff;border-color:var(--glow);background:rgba(174,191,255,.24);box-shadow:0 0 16px rgba(140,160,255,.3),inset 0 0 0 1px var(--glow)}
-.pl-tg.on .pi{fill:var(--ic);fill-opacity:.35}
-.pl-tg.on::after{content:"✓";margin-left:auto;font-size:13px;color:var(--glow)}
-.pl-tg:focus-visible,.pl-day:focus-visible,.pl-arrow:focus-visible,.pl-ex:focus-visible{outline:2px solid var(--glow);outline-offset:2px}
-.pl-lbl{display:block;margin:16px 0 6px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.pl-side textarea,.pl-copybox{box-sizing:border-box;max-width:100%;width:100%;font:inherit;font-size:14px;line-height:1.5;color:var(--ink);background:rgba(3,6,16,.6);border:1px solid rgba(226,232,255,.28);padding:10px 12px;resize:vertical}
-.pl-side textarea:focus{outline:none;border-color:var(--glow)}
-.pl-saved{min-height:18px;margin-top:8px;font-size:12px;color:var(--glow);opacity:0;transition:opacity .3s}.pl-saved.on{opacity:1}
-.pl-exp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-.pl-ex{display:flex;align-items:center;gap:10px;font:inherit;font-size:14px;color:var(--ink);background:rgba(8,12,27,.55);border:1px solid var(--frame);padding:14px;cursor:pointer;text-align:left;min-width:0}
-.pl-ex:hover{border-color:var(--glow);box-shadow:0 0 18px rgba(140,160,255,.2)}
-.pl-copybox{margin-top:10px;min-height:120px}
-.pl-link{margin-top:12px;padding:12px 18px}
-@media (max-width:720px){.pl-wrap,.pl-exp{grid-template-columns:1fr}.pl-day{min-height:52px;padding:4px}.pl-ics .pi{width:11px;height:11px}.pl-cal,.pl-side{padding:12px}.pl-grid{gap:3px}}
 .topnav{position:fixed;z-index:11;top:calc(26px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);display:flex;gap:4px}
 .topnav button{font:inherit;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#c9d2f5;background:none;border:0;border-bottom:1px solid transparent;padding:6px 12px;cursor:pointer;transition:color .2s,border-color .2s,text-shadow .2s}
 .topnav button:hover,.topnav button[aria-current="page"]{color:#fff;border-bottom-color:var(--glow);text-shadow:0 0 10px rgba(150,180,255,.7)}
@@ -276,7 +239,7 @@ body.page-open .pg-shade{opacity:1}
 </section>
 <div class="hint" id="hint"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg><span id="hintTxt">листай вниз</span></div>
 <div id="fade" aria-hidden="true"></div>
-<nav class="topnav" aria-label="Разделы сайта" style="opacity:0;visibility:hidden"><button data-page="about">О проекте</button><button data-page="stories">Истории</button><button data-page="planner">Планер</button><button data-page="contacts">Контакты</button></nav>
+<nav class="topnav" aria-label="Разделы сайта" style="opacity:0;visibility:hidden"><button data-page="about">О проекте</button><button data-page="stories">Истории</button><button data-page="contacts">Контакты</button></nav>
 <section class="pg" id="pg-about" hidden aria-label="О проекте"><div class="pg-in">
   <div class="pg-kick">О проекте</div>
   <h1 class="pg-h" data-nb>Ты мама, и это важная часть тебя. Но не единственная.</h1>
@@ -288,9 +251,8 @@ body.page-open .pg-shade{opacity:1}
   <div class="pg-sec"><div class="pg-lab"><b>03</b> / <span>немного поддержки</span></div>
     <h2 class="pg-h2">Немного поддержки</h2>
     <p class="pg-p" data-nb>Если сейчас на себя почти не остаётся времени, это нормально и не значит, что ты что-то делаешь не так. Мы не будем советовать «просто найти время на себя». Вместо этого собрали в одном чек-листе:</p>
-    <ul class="sup"><li><svg class="gs " viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3.5c1.2 5.4 2.6 9.6 4.1 12.7 4.4.1 8.8.3 12.4.9-3.5 2.4-6.8 4.6-9.6 7 1.4 4.4 2.6 8.8 3.4 12.4-3.6-2.6-7.1-5-10.4-7.4-3.3 2.6-6.7 5-10.2 7.6.9-3.9 2.2-8.3 3.6-12.6C10.4 21.5 7 19.2 3.4 17c4-.6 8.4-.9 12.7-.9 1.3-4.2 2.6-8.6 3.9-12.6z"/></svg><span data-nb>Лайфхаки для повседневных дел</span></li><li><svg class="gs f" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3.5c1.2 5.4 2.6 9.6 4.1 12.7 4.4.1 8.8.3 12.4.9-3.5 2.4-6.8 4.6-9.6 7 1.4 4.4 2.6 8.8 3.4 12.4-3.6-2.6-7.1-5-10.4-7.4-3.3 2.6-6.7 5-10.2 7.6.9-3.9 2.2-8.3 3.6-12.6C10.4 21.5 7 19.2 3.4 17c4-.6 8.4-.9 12.7-.9 1.3-4.2 2.6-8.6 3.9-12.6z"/></svg><span data-nb>Идеи, как разделить заботы с близкими</span></li><li><svg class="gs " viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3.5c1.2 5.4 2.6 9.6 4.1 12.7 4.4.1 8.8.3 12.4.9-3.5 2.4-6.8 4.6-9.6 7 1.4 4.4 2.6 8.8 3.4 12.4-3.6-2.6-7.1-5-10.4-7.4-3.3 2.6-6.7 5-10.2 7.6.9-3.9 2.2-8.3 3.6-12.6C10.4 21.5 7 19.2 3.4 17c4-.6 8.4-.9 12.7-.9 1.3-4.2 2.6-8.6 3.9-12.6z"/></svg><span data-nb>Ссылки на сообщества</span></li><li><svg class="gs f" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3.5c1.2 5.4 2.6 9.6 4.1 12.7 4.4.1 8.8.3 12.4.9-3.5 2.4-6.8 4.6-9.6 7 1.4 4.4 2.6 8.8 3.4 12.4-3.6-2.6-7.1-5-10.4-7.4-3.3 2.6-6.7 5-10.2 7.6.9-3.9 2.2-8.3 3.6-12.6C10.4 21.5 7 19.2 3.4 17c4-.6 8.4-.9 12.7-.9 1.3-4.2 2.6-8.6 3.9-12.6z"/></svg><span data-nb>Мини-планер для дел, отдыха и желаний</span></li></ul>
+    <ul class="sup"><li><svg class="gs " viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3.5c1.2 5.4 2.6 9.6 4.1 12.7 4.4.1 8.8.3 12.4.9-3.5 2.4-6.8 4.6-9.6 7 1.4 4.4 2.6 8.8 3.4 12.4-3.6-2.6-7.1-5-10.4-7.4-3.3 2.6-6.7 5-10.2 7.6.9-3.9 2.2-8.3 3.6-12.6C10.4 21.5 7 19.2 3.4 17c4-.6 8.4-.9 12.7-.9 1.3-4.2 2.6-8.6 3.9-12.6z"/></svg><span data-nb>Лайфхаки для повседневных дел</span></li><li><svg class="gs f" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3.5c1.2 5.4 2.6 9.6 4.1 12.7 4.4.1 8.8.3 12.4.9-3.5 2.4-6.8 4.6-9.6 7 1.4 4.4 2.6 8.8 3.4 12.4-3.6-2.6-7.1-5-10.4-7.4-3.3 2.6-6.7 5-10.2 7.6.9-3.9 2.2-8.3 3.6-12.6C10.4 21.5 7 19.2 3.4 17c4-.6 8.4-.9 12.7-.9 1.3-4.2 2.6-8.6 3.9-12.6z"/></svg><span data-nb>Идеи, как разделить заботы с близкими</span></li><li><svg class="gs " viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3.5c1.2 5.4 2.6 9.6 4.1 12.7 4.4.1 8.8.3 12.4.9-3.5 2.4-6.8 4.6-9.6 7 1.4 4.4 2.6 8.8 3.4 12.4-3.6-2.6-7.1-5-10.4-7.4-3.3 2.6-6.7 5-10.2 7.6.9-3.9 2.2-8.3 3.6-12.6C10.4 21.5 7 19.2 3.4 17c4-.6 8.4-.9 12.7-.9 1.3-4.2 2.6-8.6 3.9-12.6z"/></svg><span data-nb>Ссылки на сообщества</span></li></ul>
     <div class="dl one"><button class="dl-card" id="dlCheck"><svg class="gs f" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3.5c1.2 5.4 2.6 9.6 4.1 12.7 4.4.1 8.8.3 12.4.9-3.5 2.4-6.8 4.6-9.6 7 1.4 4.4 2.6 8.8 3.4 12.4-3.6-2.6-7.1-5-10.4-7.4-3.3 2.6-6.7 5-10.2 7.6.9-3.9 2.2-8.3 3.6-12.6C10.4 21.5 7 19.2 3.4 17c4-.6 8.4-.9 12.7-.9 1.3-4.2 2.6-8.6 3.9-12.6z"/></svg><span class="dl-t">Чек-лист</span><span class="dl-d" data-nb>Всё из списка в одном файле. Можно открыть на телефоне или распечатать и отмечать галочками.</span><span class="dl-c">Скачать</span></button></div>
-    <button class="btn pl-link" data-page="planner">Открыть онлайн-планер на месяц</button>
     <p class="dl-st" id="dlStatus" aria-live="polite"></p><p class="dl-st" id="dlNote" hidden data-nb>Скачивание работает, когда страница открыта в claude.ai.</p>
     <p class="care" data-nb>Если тяжело уже долго, пропали силы и радость или тревога не отпускает, поговори со специалистом: психологом или врачом. Это тоже забота о себе.</p></div>
   <div class="pg-sec"><div class="pg-lab"><b>04</b> / <span>чей это проект</span></div>
@@ -305,31 +267,6 @@ body.page-open .pg-shade{opacity:1}
     <article class="st-card"><div class="win lit"><i></i><i></i><i></i><i></i></div><div class="pg-lab"><b>01</b> / <span>Анина душа</span></div><h2 data-nb>Аня</h2><p data-nb>Год назад у неё родилась дочь. В комнате остались фото с подругами, тетрадь с рассказами и коньки у зеркала.</p><button class="btn main" data-go="anya">Заглянуть в окно</button></article>
     <article class="st-card"><div class="win dim"><i></i><i></i><i></i><i></i></div><div class="pg-lab"><b>02</b> / <span>Дашина душа</span></div><h2 data-nb>Даша</h2><p data-nb>Её история пока пишется. Совсем скоро здесь можно будет заглянуть в её комнату.</p><button class="btn" disabled>Скоро</button></article>
     <article class="st-card"><div class="win empty"><i></i><i></i><i></i><i></i></div><div class="pg-lab"><b>03</b> / <span>твоя душа</span></div><h2 data-nb>Твоя история</h2><p data-nb>Если хочешь, чтобы следующее окно было твоим, расскажи нам свою историю.</p><button class="btn" data-page="contacts">Рассказать историю</button></article>
-  </div>
-</div></section>
-<section class="pg" id="pg-planner" hidden aria-label="Планер"><div class="pg-in">
-  <div class="pg-kick">Планер</div>
-  <h1 class="pg-h" data-nb>Мой месяц</h1>
-  <p class="pg-lead" data-nb>Отмечай значками, что было в каждом дне: время для себя, встречи, отдых. Всё сохраняется само, а потом это можно перенести в Заметки, Google Таблицы или Notion.</p>
-  <div class="pl-legend" id="plLegend"></div>
-  <div class="pl-wrap">
-    <div class="pl-cal">
-      <div class="pl-head"><button class="pl-arrow" id="plPrev">‹</button><div class="pl-month" id="plMonth"></div><button class="pl-arrow" id="plNext">›</button></div>
-      <div class="pl-grid" id="plGrid"></div>
-      <p class="pl-count" id="plCount"></p>
-    </div>
-    <div class="pl-side">
-      <div class="pl-day-title" id="plDayTitle"></div>
-      <div class="pl-toggles" id="plToggles"></div>
-      <label class="pl-lbl" for="plNote" id="plNoteLbl"></label><textarea id="plNote" rows="3" maxlength="400"></textarea>
-      <label class="pl-lbl" for="plWish" id="plWishLbl"></label><textarea id="plWish" rows="3" maxlength="800"></textarea>
-      <div class="pl-saved" id="plSaved" aria-live="polite"></div>
-    </div>
-  </div>
-  <div class="pg-sec"><div class="pg-lab"><b>01</b> / <span>перенести в приложение</span></div>
-    <div class="pl-exp"><button class="pl-ex" id="plCopy"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true" style="--ic:#dfe6ff"><path d="M8 4h9a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zM9 9h7M9 13h7M9 17h4"/></svg><span></span></button><button class="pl-ex" id="plCsv"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true" style="--ic:#dfe6ff"><path d="M4 5h16v14H4zM4 10h16M4 15h16M10 5v14"/></svg><span></span></button><button class="pl-ex" id="plMd"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true" style="--ic:#dfe6ff"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 12h6M9 16h6"/></svg><span></span></button></div>
-    <p class="dl-st" id="plExpSt" aria-live="polite"></p><textarea id="plCopyBox" class="pl-copybox" hidden readonly></textarea>
-    <p class="pg-p" data-nb>Таблицу можно открыть в Google Таблицах, Excel или Numbers. Текст вставляется в Заметки на телефоне, в Notion или в мессенджер.</p>
   </div>
 </div></section>
 <section class="pg" id="pg-contacts" hidden aria-label="Контакты"><div class="pg-in narrow">
@@ -354,6 +291,7 @@ body.page-open .pg-shade{opacity:1}
 
 <button class="soul" id="soulAnya"><span class="soul-name">Анина душа</span><span class="soul-hint">посмотреть историю</span></button>
 <button class="soul dim" id="soulDasha"><span class="soul-name">Дашина душа</span><span class="soul-hint">посмотреть историю</span></button>
+<button class="soul you" id="soulYou"><span class="soul-name">Добавить свою историю</span><span class="soul-hint">рассказать нам</span></button>
 <div class="pg-shade" aria-hidden="true"></div>
 <div class="tools"><button class="menu-btn" id="menuBtn" aria-label="Меню" aria-expanded="false"><i></i><i></i><i></i></button><button class="lang" id="lang" aria-label="Switch to English">EN</button><button class="sound" id="sound" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 6v12l-4.5-3.5H4z"/><path class="w1" d="M15.5 9.2a4 4 0 0 1 0 5.6"/><path class="w2" d="M18 7a7 7 0 0 1 0 10"/></svg><span id="soundLbl">включить звук</span></button></div>
 <div id="title">
@@ -810,9 +748,15 @@ function house(x,z,w,h,d,col,ry,hero){ const g=new THREE.Group(); g.position.set
     winList.push({m,lit,off:.12+r()*.8,on:r()*.85,level:1}); }
   return g; }
 [[-8.6,SZ-2.5,5,4.4,5,0x2b3352,.12],[-15.8,SZ-1.5,6,6.2,6,0x343a55,.22],[8.4,SZ-2.5,5,4.8,5,0x3a3348,-.12],[15.6,SZ-1.5,6,5.6,6,0x283a4f,-.22],
- [-4.5,SZ-15,6,7.4,6,0x2e3450,0],[6.5,SZ-16,7,8.4,6,0x363449,0],[-14,SZ-14,6,6,6,0x2a3247,.1],[15,SZ-14,6,7,6,0x313a52,-.1],[0,SZ-26,8,9,6,0x262c44,0]]
+ [-4.5,SZ-15,6,7.4,6,0x2e3450,0],[6.5,SZ-16,7,8.4,6,0x363449,0],[-14,SZ-14,6,6,6,0x2a3247,.1],[15,SZ-14,6,7,6,0x313a52,-.1],[0,SZ-26,8,9,6,0x262c44,0],[25,SZ-14,6,6.6,6,0x2f3650,-.08],[33,SZ-6,6,5.8,6,0x2a3349,-.2]]
  .map(a=>house(...a));
 const dashaHouse=new THREE.Vector3(8.4,7.6,SZ-2.5);
+/* третий дом справа: окно ждёт новую историю */
+const youHouse=new THREE.Vector3(25,7.4,SZ-2.5);
+const youWinMat=new THREE.MeshBasicMaterial({color:0x0f1428}); const YOU_LIT=new THREE.Color(0xb9c8ff);
+{ const g=house(25,SZ-2.5,5.4,4.6,5,0x2d3552,-.12,true);
+  [[.3,1.6],[1.6,1.6],[-1.2,3.4],[1.1,3.4]].forEach(([wx,wy],i)=>{ box(.98,1.18,.06,M(0x8b8fa3,{roughness:.7}),wx,wy,2.52,g);
+    mesh(new THREE.PlaneGeometry(.84,1.04),i===3?youWinMat:new THREE.MeshBasicMaterial({color:0x0f1428}),wx,wy,2.556,g,false); }); }
 /* дом Ани */
 const hero=house(0,SZ-3,6.2,5.4,6,0x2f3858,0,true);
 const heroWin=new THREE.Group(); heroWin.position.set(0,2.4,SZ); street.add(heroWin);
@@ -834,7 +778,7 @@ const warmGlow=new THREE.SpriteMaterial({map:glowTex,color:0xffc98f,transparent:
 const hg=new THREE.Sprite(warmGlow); hg.position.set(0,2.4,SZ+.15); hg.scale.setScalar(3.2); street.add(hg);
 /* деревья и фонари */
 const trees=[];
-[[-4.6,SZ+1.4,1],[4.8,SZ+1.8,1.1],[-11.8,SZ+2.4,1.2],[12,SZ+2.6,1],[-20,SZ+3,1.3],[20,SZ+3,1.2]].forEach(([x,z,s],i)=>{
+[[-4.6,SZ+1.4,1],[4.8,SZ+1.8,1.1],[-11.8,SZ+2.4,1.2],[12,SZ+2.6,1],[-20,SZ+3,1.3],[20,SZ+3,1.2],[30,SZ+2.8,1.1]].forEach(([x,z,s],i)=>{
   const g=new THREE.Group(); g.position.set(x,0,z); g.scale.setScalar(s); street.add(g); trees.push(g); const r=rnd(i*31+7);
   const bark=M(0x241e24,{roughness:.95});
   const tr=new THREE.CatmullRomCurve3([new THREE.Vector3(0,0,0),new THREE.Vector3(.04,1.1,0),new THREE.Vector3(-.03,2.2,.02),new THREE.Vector3(0,3.1,0)]);
@@ -849,7 +793,7 @@ const trees=[];
   const cr=mesh(cg,crownMat,0,3.45,0,g); cr.rotation.y=r()*6;
   const c2=mesh(cg,crownMat,.75,2.9,.2,g); c2.scale.setScalar(.62); c2.rotation.y=r()*6;
   const c3=mesh(cg,crownMat,-.7,3.05,-.15,g); c3.scale.setScalar(.55); c3.rotation.y=r()*6; });
-[[-6.5,SZ+5.6],[6.8,SZ+5.6]].forEach(([x,z])=>{ cyl(.06,.08,4.2,M(0x1b1e2b,{metalness:.5,roughness:.5}),x,2.1,z,street,8);
+[[-6.5,SZ+5.6],[6.8,SZ+5.6],[21.5,SZ+5.6]].forEach(([x,z])=>{ cyl(.06,.08,4.2,M(0x1b1e2b,{metalness:.5,roughness:.5}),x,2.1,z,street,8);
   const lm=sph(.18,new THREE.MeshBasicMaterial({color:0xffe2b8}),x,4.25,z,street);
   const l=new THREE.PointLight(0xffd7a0,.7,10,1.6); l.position.set(x,4,z); street.add(l);
   const s=new THREE.Sprite(warmGlow); s.position.set(x,4.25,z); s.scale.setScalar(1.6); street.add(s); });
@@ -863,7 +807,7 @@ for(let L=0;L<3;L++){ const n=260, pos=new Float32Array(n*3), r=rnd(400+L);
 let pud;
 /* живая изгородь и лужи перед домами */
 { const r=rnd(77), hedge=M(0x1a2626,{roughness:1});
-  for(let x=-22;x<=22;x+=1.1){ if(Math.abs(x+1.9)<1.1) continue; const b=sph(.45+r()*.2,hedge,x+(r()-.5)*.3,.3,SZ+4.2+(r()-.5)*.3,street); b.scale.set(1.25,.75,1); }
+  for(let x=-22;x<=31;x+=1.1){ if(Math.abs(x-25)<1.1) continue; if(Math.abs(x+1.9)<1.1) continue; const b=sph(.45+r()*.2,hedge,x+(r()-.5)*.3,.3,SZ+4.2+(r()-.5)*.3,street); b.scale.set(1.25,.75,1); }
   pud=M(0x2a3352,{roughness:.05,metalness:.9,transparent:true});
   [[-3.5,SZ+8.5,2.2],[2.8,SZ+10,1.6],[-9,SZ+11,2.6],[7.5,SZ+8.8,2],[0,SZ+13,1.4]].forEach(([x,z,w])=>{ const p=mesh(new THREE.CircleGeometry(1,32),pud,x,.025,z,street,false); p.rotation.x=-Math.PI/2; p.scale.set(w,w*.45,1); }); }
 /* дождь и снег */
@@ -872,17 +816,18 @@ for(let i=0;i<RN;i++){ const x=(rr()-.5)*30, y=rr()*15, z=SZ-4+rr()*34; rainPos.
 const rainGeo=new THREE.BufferGeometry(); rainGeo.setAttribute('position',new THREE.BufferAttribute(rainPos,3));
 const rainMat=new THREE.LineBasicMaterial({color:0x9fb3dc,transparent:true,opacity:.4,depthWrite:false});
 street.add(new THREE.LineSegments(rainGeo,rainMat));
-const SN=1800, snowPos=new Float32Array(SN*3), snowSeed=new Float32Array(SN);
-for(let i=0;i<SN;i++){ snowPos.set([(rr()-.5)*30,rr()*15,SZ-4+rr()*34],i*3); snowSeed[i]=rr()*6.28; }
+const SN=6500, snowPos=new Float32Array(SN*3), snowSeed=new Float32Array(SN);
+for(let i=0;i<SN;i++){ snowPos.set([(rr()-.5)*90,rr()*18,SZ-8+rr()*54],i*3); snowSeed[i]=rr()*6.28; }
 const snowGeo=new THREE.BufferGeometry(); snowGeo.setAttribute('position',new THREE.BufferAttribute(snowPos,3));
-const snowMat=new THREE.PointsMaterial({map:dotTex,color:0xffffff,size:.09,transparent:true,opacity:0,depthWrite:false});
+const snowMat=new THREE.PointsMaterial({map:dotTex,color:0xffffff,size:.28,transparent:true,opacity:0,depthWrite:false});
 street.add(new THREE.Points(snowGeo,snowMat));
+let GUST=0;   /* сильный ветер в главе «Смена времени года» */
 function weather(dt,t,rain,snow){
-  rainMat.opacity=.42*rain; snowMat.opacity=.95*snow;
+  rainMat.opacity=.42*rain; snowMat.opacity=snow;
   if(rain>.01){ for(let i=0;i<RN;i++){ const o=i*6; rainPos[o+1]-=16*dt; rainPos[o+4]-=16*dt; if(rainPos[o+1]<0){ rainPos[o+1]+=15; rainPos[o+4]+=15; } } rainGeo.attributes.position.needsUpdate=true; }
-  if(snow>.01){ for(let i=0;i<SN;i++){ const o=i*3; snowPos[o+1]-=.9*dt; snowPos[o]+=Math.sin(t*.7+snowSeed[i])*.25*dt; if(snowPos[o+1]<0) snowPos[o+1]+=15; } snowGeo.attributes.position.needsUpdate=true; }
+  if(snow>.01){ for(let i=0;i<SN;i++){ const o=i*3; snowPos[o+1]-=(1.25+GUST*.8)*dt; snowPos[o]+=(Math.sin(t*.7+snowSeed[i])*.3+GUST*(7+3*Math.sin(t*1.3+snowSeed[i])))*dt; if(snowPos[o]>45) snowPos[o]-=90; if(snowPos[o+1]<0) snowPos[o+1]+=18; } snowGeo.attributes.position.needsUpdate=true; }
   skyMats.forEach((m,i)=>m.opacity=.55+.4*Math.sin(t*(.8+i*.5)+i*2));
-  trees.forEach((g,i)=>{ g.rotation.z=Math.sin(t*.9+i)*.025*(.4+rain); g.rotation.x=Math.cos(t*.7+i*2)*.015; });
+  trees.forEach((g,i)=>{ g.rotation.z=Math.sin(t*.9+i)*.025*(.4+rain)-GUST*(.07+.05*Math.sin(t*2.1+i*1.7)); g.rotation.x=Math.cos(t*.7+i*2)*.015; });
   const sp=1.1+2.6*agit, am=.05+.11*agit; rockPh+=dt*sp; sil.rotation.z=Math.sin(rockPh)*am; sil.position.x=.15+Math.sin(rockPh)*(.03+.05*agit);
   heroWinMat.color.copy(HW_BASE).lerp(HW_HOT,agit*(.6+.4*Math.sin(t*9))); heroLight.intensity=.9+.9*agit;
 }
@@ -941,26 +886,30 @@ function loop(){ const dt=Math.min(clock.getDelta(),.05), t=clock.elapsedTime;
     agit=cried&&prog<3?Math.max(0,1-(t-cryT)/7):0;
     if(agit>.6){ const k=(agit-.6)/.4; camera.position.x+=Math.sin(t*47)*.025*k; camera.position.y+=Math.cos(t*39)*.02*k; }
     fadeEl.style.opacity=Math.max(0,1-Math.abs(prog-2.97)/.2).toFixed(3);
-    const rain=1-sstep(1.15,1.75,prog), snow=sstep(1.2,1.9,prog);
+    const rain=sstep(.3,.38,prog)*(1-sstep(1.15,1.75,prog)), snow=sstep(1.2,1.9,prog);
     snowGroundMat.opacity=snowRoofMat.opacity=.92*sstep(1.3,2.2,prog);
-    pud.opacity=1-snowGroundMat.opacity/.92;
+    pud.opacity=sstep(.3,.5,prog)*(1-sstep(1.0,1.35,prog));
     winList.forEach(w=>{ w.level+=((prog<w.off?1:0)-w.level)*Math.min(1,dt*3); w.m.color.copy(DARK_WIN).lerp(w.lit,w.level); });
+    GUST=sstep(1.0,1.3,prog)*(1-sstep(1.85,2.15,prog));
     if(street.visible) weather(dt,t,rain,snow);
     let s=0; STORY.forEach((st,i)=>{ if(prog+.12>=st[3]) s=i; }); if(s!==stage){ stage=s; story(s); }
     const tv=1-sstep(.04,.38,prog); titleEl.style.opacity=aboutOpen?0:tv.toFixed(3); titleEl.style.visibility=(aboutOpen||tv<.02)?'hidden':'visible'; const ui=Math.max(0,Math.min(1,(.3-tv)/.3)); brandEl.style.opacity=aboutOpen?1:ui.toFixed(3); navEl.style.opacity=aboutOpen?1:ui.toFixed(3); navEl.style.visibility=(!aboutOpen&&ui<.02)?'hidden':'visible'; menuBtn.style.opacity=navEl.style.opacity; menuBtn.style.visibility=navEl.style.visibility; setMenuK(aboutOpen?1:ui); hintEl.style.opacity=.85;
     panel.classList.toggle('away',prog<.36||aboutOpen);
     const ok=sstep(.15,.6,prog); if(Math.abs(ok-offK)>.002){ offK=ok; applyOffset(); }
   } else if(mode==='outro'){
-    outroT+=dt; weather(dt,t,0,1); pud.opacity=0;
+    outroT+=dt; GUST=0; weather(dt,t,0,1); pud.opacity=0;
     const lv=aboutOpen?0:sstep(4.5,6.5,outroT); labelEls.forEach(L=>{ L.el.style.opacity=lv; L.el.style.visibility=lv<.02?'hidden':'visible'; if(lv>0){ _lp.copy(L.pos).project(camera);
       L.el.style.left=((_lp.x+1)/2*innerWidth)+'px'; L.el.style.top=((1-_lp.y)/2*innerHeight)+'px'; } });
     winList.forEach(w=>{ w.level+=((outroT>1.5+w.on*5?1:0)-w.level)*Math.min(1,dt*2); w.m.color.copy(DARK_WIN).lerp(w.lit,w.level); });
+    youWinMat.color.copy(DARK_WIN).lerp(YOU_LIT,sstep(5,7,outroT)*(.55+.45*Math.sin(t*1.6)));
   }
   if(tween){ tween.t+=dt/tween.dur; const e=ease(Math.min(1,tween.t));
     camera.position.lerpVectors(tween.fp,tween.tp,e); controls.target.lerpVectors(tween.ft,tween.tt,e);
     if(tween.t>=1){ tween=null; controls.enabled=true; } }
   soundUpdate();
-  controls.update(); renderer.render(scene,camera); requestAnimationFrame(loop); }
+  controls.update();
+  if(mode==='outro'&&!tween){ const dy=controls.target.y-OUT_Y, dz=controls.target.z-OUT_Z; camera.position.y-=dy; camera.position.z-=dz; controls.target.y=OUT_Y; controls.target.z=OUT_Z; shiftStreet(0); }
+  renderer.render(scene,camera); requestAnimationFrame(loop); }
 
 /* ================= тексты ================= */
 /* ================= языки ================= */
@@ -970,9 +919,9 @@ const UI={
   finCap:'Финал',finQ:'Ты стала мамой. Но не перестала быть собой.',finCtx:'Твои желания, интересы и мечты по-прежнему имеют значение, даже если сейчас на них не всегда хватает времени.',
   outCap:'За пределами одной комнаты',outCtx:'НТМ — не только мама',outQ:'У каждой женщины своя история. И ни одна из них не заканчивается на слове «мама».',
   dCap:'Дашина душа',dCtx:'История Даши пока пишется. Совсем скоро здесь можно будет заглянуть в её комнату.',dQ:'У каждой женщины своя история',
-  hint_scroll:(matchMedia('(pointer:coarse)').matches?'свайпай вверх':'листай вниз'),hint_room:'покрути комнату',hint_street:'покрути улицу',
+  hint_scroll:(matchMedia('(pointer:coarse)').matches?'свайпай вверх':'листай вниз'),hint_room:'покрути комнату',hint_street:'двигай улицу вправо',
   snd_off:'включить звук',snd_on:'звук включён',snd_na:'звук недоступен',
-  soulA:'Анина душа',soulD:'Дашина душа',soulHint:'посмотреть историю',
+  soulA:'Анина душа',soulD:'Дашина душа',soulHint:'посмотреть историю',soulY:'Добавить свою историю',soulYHint:'рассказать нам',
   dl_na:'Скачивание здесь недоступно. Открой страницу в claude.ai.',dl_ok:'Файл сохранён. Его можно открыть в браузере и распечатать.',dl_no:'Скачивание отменено.',dl_err:'Не получилось сохранить файл. Попробуй ещё раз чуть позже.',
   f_short:'Напиши хотя бы пару предложений, чтобы мы поняли твою историю.',f_agree:'Отметь согласие, чтобы мы могли прочитать историю.',
   f_na:'Отправка работает, только если открыть сайт в claude.ai под своим аккаунтом с доступом к проекту. Пока можно скопировать текст и написать авторам напрямую.',
@@ -982,9 +931,9 @@ const UI={
   finCap:'Finale',finQ:'You became a mother. But you didn’t stop being yourself.',finCtx:'Your wishes, interests and dreams still matter, even if right now there isn’t always time for them.',
   outCap:'Beyond one room',outCtx:'НТМ — not just a mom',outQ:'Every woman has her own story. And none of them ends with the word “mom”.',
   dCap:'Dasha’s soul',dCtx:'Dasha’s story is still being written. Soon you’ll be able to look into her room here.',dQ:'Every woman has her own story',
-  hint_scroll:(matchMedia('(pointer:coarse)').matches?'swipe up':'scroll down'),hint_room:'drag to turn the room',hint_street:'drag to turn the street',
+  hint_scroll:(matchMedia('(pointer:coarse)').matches?'swipe up':'scroll down'),hint_room:'drag to turn the room',hint_street:'drag the street sideways',
   snd_off:'turn on sound',snd_on:'sound on',snd_na:'sound unavailable',
-  soulA:'Anya’s soul',soulD:'Dasha’s soul',soulHint:'see her story',
+  soulA:'Anya’s soul',soulD:'Dasha’s soul',soulHint:'see her story',soulY:'Add your story',soulYHint:'tell us',
   dl_na:'Downloads aren’t available here. Open the page in claude.ai.',dl_ok:'File saved. You can open it in a browser and print it.',dl_no:'Download cancelled.',dl_err:'Couldn’t save the file. Please try again a bit later.',
   f_short:'Write at least a couple of sentences so we can understand your story.',f_agree:'Tick the consent box so we can read your story.',
   f_na:'Sending only works when the site is open in claude.ai with an account that has access to the project. For now you can copy your text and write to the authors directly.',
@@ -1033,7 +982,7 @@ function setMenuK(k){ const st=menuBtn.style; if(innerWidth>720){ st.width=st.pa
   k=Math.max(0,Math.min(1,k)); st.width=(38*k).toFixed(1)+'px'; st.paddingLeft=st.paddingRight=(10*k).toFixed(1)+'px'; st.marginLeft=(-8*(1-k)).toFixed(1)+'px'; st.borderWidth=k<.04?'0':''; st.overflow='hidden'; }
 function enterRoom(){ document.body.classList.add('in-room'); menuBtn.style.opacity=1; menuBtn.style.visibility='visible'; setMenuK(1); offK=1; applyOffset(); navEl.style.opacity=1; navEl.style.visibility='visible'; titleEl.style.opacity=0; titleEl.style.visibility='hidden'; brandEl.style.opacity=1; hintEl.style.opacity=.85; panel.classList.remove('away'); controls.maxDistance=17; controls.minDistance=2; controls.maxPolarAngle=1.45; mode='room'; P=prog=PMAX; street.visible=false; fadeEl.style.opacity=0; setHint('hint_room'); ask(0); }
 function startIntro(){
-  document.body.classList.remove('in-room'); hideLabels&&hideLabels(); mode='intro'; OUTRO_OFF=false; applyOffset(); P=0; prog=0; stage=-1; selfCount=0; allLit=false; tween=null; controls.enabled=false; controls.maxDistance=80; controls.minDistance=.3; controls.maxPolarAngle=Math.PI;
+  document.body.classList.remove('in-room'); hideLabels&&hideLabels(); mode='intro'; setStreetPan(false); OUTRO_OFF=false; applyOffset(); P=0; prog=0; stage=-1; selfCount=0; allLit=false; tween=null; controls.enabled=false; controls.maxDistance=80; controls.minDistance=.3; controls.maxPolarAngle=Math.PI;
   zones.crib.target=1; ['friends','chair','skates','bridge'].forEach(n=>zones[n].target=0); doorGlowMat.opacity=0;
   winList.forEach(w=>w.level=1); street.visible=true; fadeEl.style.transition='none'; fadeEl.style.opacity=0; setHint('hint_scroll');
 }
@@ -1051,11 +1000,18 @@ function finale(){ goTo('final');
   show(()=>{ setText('10',t('finCap'),t('finCtx'),t('finQ'));
     const lit=allLit||selfCount>=3; if(!lit) btn(t('lightAll'),'main',e=>{ lightAll(); e.currentTarget.remove(); });
     btn(t('next'),lit?'main':'',outro); }); }
+/* в конце улицу можно спокойно двигать вбок, до третьего дома справа */
+const OUT_Y=3.4, OUT_Z=SZ-3, OUT_MIN=-8, OUT_MAX=27;
+function setStreetPan(on){ controls.enablePan=on; controls.enableRotate=!on; controls.enableZoom=!on; controls.screenSpacePanning=true;
+  controls.mouseButtons.LEFT=on?THREE.MOUSE.PAN:THREE.MOUSE.ROTATE; controls.touches.ONE=on?THREE.TOUCH.PAN:THREE.TOUCH.ROTATE; }
+function shiftStreet(dx){ const nx=Math.max(OUT_MIN,Math.min(OUT_MAX,controls.target.x+dx)), d=nx-controls.target.x; controls.target.x+=d; camera.position.x+=d; }
+addEventListener('wheel',e=>{ if(mode!=='outro'||aboutOpen||tween) return; e.preventDefault(); const v=Math.abs(e.deltaX)>Math.abs(e.deltaY)?e.deltaX:e.deltaY; shiftStreet(v*.02); },{passive:false});
+addEventListener('keydown',e=>{ if(mode!=='outro'||aboutOpen) return; if(e.key==='ArrowRight'){ e.preventDefault(); shiftStreet(1.5); } if(e.key==='ArrowLeft'){ e.preventDefault(); shiftStreet(-1.5); } });
 function outro(){
   panel.classList.add('fade'); fadeEl.style.transition='opacity .9s ease'; fadeEl.style.opacity=1;
   setTimeout(()=>{
     document.body.classList.remove('in-room'); mode='outro'; OUTRO_OFF=true; applyOffset(); outroT=0; street.visible=true; snowGroundMat.opacity=snowRoofMat.opacity=.92; winList.forEach(w=>{ w.level=0; w.m.color.copy(DARK_WIN); });
-    tween=null; controls.maxDistance=45; controls.minDistance=.3; controls.maxPolarAngle=1.62; camera.position.set(0,2.45,SZ+1.9); controls.target.set(0,2.4,SZ); controls.update();
+    tween=null; controls.maxDistance=45; controls.minDistance=.3; controls.maxPolarAngle=1.62; setStreetPan(true); camera.position.set(0,2.45,SZ+1.9); controls.target.set(0,2.4,SZ); controls.update();
     const far=new THREE.Vector3(0,6.2,SZ+30); if(narrow()) far.z+=12;
     tweenTo(far,new THREE.Vector3(0,3.4,SZ-3),reduce?.01:7);
     fadeEl.style.opacity=0; setHint('hint_street');
@@ -1079,6 +1035,9 @@ function initAudio(){
   /* ветер и снег */
   Snd.wind=G(0); { const lp=F('lowpass',380,.8), lfo=ctx.createOscillator(), lg=G(160); lfo.frequency.value=.08; lfo.connect(lg); lg.connect(lp.frequency); lfo.start();
     noise().connect(lp); lp.connect(Snd.wind); Snd.wind.connect(master); }
+  /* порывы ветра: воющая полоса шума, плавает по частоте */
+  Snd.gust=G(0); { const bp=F('bandpass',650,2.2), lfo=ctx.createOscillator(), lg=G(320); lfo.frequency.value=.23; lfo.connect(lg); lg.connect(bp.frequency); lfo.start();
+    noise().connect(bp); bp.connect(Snd.gust); Snd.gust.connect(master); }
   /* мягкий фон-аккорд */
   Snd.pad=G(0); { const lp=F('lowpass',800); lp.connect(Snd.pad); Snd.pad.connect(master);
     [[146.83,'sine',-5],[220,'triangle',4],[293.66,'sine',-3],[369.99,'sine',6],[440,'sine',-7]].forEach(([f,t,dt])=>{ const o=ctx.createOscillator(); o.type=t; o.frequency.value=f; o.detune.value=dt; const g=G(.06); o.connect(g); g.connect(lp); o.start(); }); }
@@ -1116,10 +1075,10 @@ function chime(){ if(!Snd.on) return; const t=Snd.ctx.currentTime+.02; [1174.66,
 function setLvl(g,v){ g.gain.setTargetAtTime(v,Snd.ctx.currentTime,.6); }
 function soundUpdate(){ if(!Snd.on) return;
   let rain=0,wind=0,pad=.55,box=0;
-  if(mode==='intro'){ const sv=prog<2.98; rain=sv?(1-sstep(1.15,1.75,prog))*.5:0; wind=sv?sstep(1.2,1.9,prog)*.35:0; pad=sv?.45:.6; box=sv?0:.5; }
+  if(mode==='intro'){ const sv=prog<2.98; rain=sv?sstep(.3,.38,prog)*(1-sstep(1.15,1.75,prog))*.5:0; wind=sv?Math.max(.24*(1-sstep(.3,.38,prog)),sstep(1.2,1.9,prog)*.38,GUST*(.8+.2*Math.sin(performance.now()/700))):0; pad=sv?.45:.6; box=sv?0:.5; }
   else if(mode==='room'){ box=.32; pad=.5; }
   else if(mode==='outro'){ wind=.3; pad=.75; box=.22; }
-  setLvl(Snd.rain,rain); setLvl(Snd.wind,wind); setLvl(Snd.pad,pad); setLvl(Snd.box,box);
+  setLvl(Snd.rain,rain); setLvl(Snd.wind,wind); if(Snd.gust) setLvl(Snd.gust,mode==='intro'&&prog<2.98?GUST*(.55+.35*Math.sin(performance.now()/900)):0); setLvl(Snd.pad,pad); setLvl(Snd.box,box);
   if(box>0||Snd.box.gain.value>.01) schedule(); }
 const sndBtn=document.getElementById('sound'), sndLbl=document.getElementById('soundLbl'), sndCta=document.getElementById('soundCta');
 function toggleSound(){
@@ -1131,13 +1090,14 @@ function toggleSound(){
 sndBtn.onclick=toggleSound; if(sndCta) sndCta.onclick=toggleSound;
 
 const _lp=new THREE.Vector3();
-const labelEls=[{el:document.getElementById('soulAnya'),pos:new THREE.Vector3(0,8.5,SZ-3)},{el:document.getElementById('soulDasha'),pos:dashaHouse}];
+const labelEls=[{el:document.getElementById('soulAnya'),pos:new THREE.Vector3(0,8.5,SZ-3)},{el:document.getElementById('soulDasha'),pos:dashaHouse},{el:document.getElementById('soulYou'),pos:youHouse}];
 labelEls.forEach(L=>{ L.el.querySelector('.soul-name').textContent=nb(L.el.querySelector('.soul-name').textContent); });
 function hideLabels(){ labelEls.forEach(L=>{ L.el.style.opacity=0; L.el.style.visibility='hidden'; }); }
 document.getElementById('soulAnya').onclick=()=>{ hideLabels(); fadeEl.style.transition='opacity .6s ease'; fadeEl.style.opacity=1; setTimeout(startIntro,650); };
+document.getElementById('soulYou').onclick=()=>{ openPage('contacts'); setTimeout(()=>{ const f=document.getElementById('storyForm'); if(f) f.scrollIntoView({behavior:'smooth',block:'start'}); },350); };
 document.getElementById('soulDasha').onclick=()=>{ show(()=>{ setText('11',t('dCap'),t('dCtx'),t('dQ'));
   btn(t('backAnya'),'',()=>{ hideLabels(); fadeEl.style.transition='opacity .6s ease'; fadeEl.style.opacity=1; setTimeout(startIntro,650); }); }); };
-/* ================= о проекте, гайд и планер ================= */
+/* ================= о проекте и гайд ================= */
 const STAR_P='M20 3.5c1.2 5.4 2.6 9.6 4.1 12.7 4.4.1 8.8.3 12.4.9-3.5 2.4-6.8 4.6-9.6 7 1.4 4.4 2.6 8.8 3.4 12.4-3.6-2.6-7.1-5-10.4-7.4-3.3 2.6-6.7 5-10.2 7.6.9-3.9 2.2-8.3 3.6-12.6C10.4 21.5 7 19.2 3.4 17c4-.6 8.4-.9 12.7-.9 1.3-4.2 2.6-8.6 3.9-12.6z';
 const st=(cls)=>`<svg class="st ${cls}" viewBox="0 0 40 40"><path d="${STAR_P}"/></svg>`;
 const DOC_CSS=`@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Nunito:wght@800;900&display=swap');
@@ -1196,13 +1156,9 @@ function checklistHTML(){
   const share=['Выписать вместе все дела по дому и уходу за малышом, чтобы было видно, сколько их на самом деле.','Отдать близким задачи целиком, а не «помогать»: например, купание и вечерняя прогулка полностью на партнёре.','Договориться о своих часах: у каждого взрослого есть время, когда он свободен, а другой с малышом.','Просить о помощи конкретно, с днём и временем: «в субботу с 11 до 13 побудь с малышкой».','Чередовать ночные вставания или утро выходных, чтобы каждый мог выспаться.','Раз в неделю коротко обсудить, что получается, а что стоит поменять.'];
   const ul=a=>`<ul class="chk">${a.map(box).join('')}</ul>`;
   const comm=COMMUNITIES.length?`<ul class="chk">${COMMUNITIES.map(([n,u,d])=>`<li><span class="cb"></span><span><b>${nbH(n)}</b><br><a href="${u}">${u}</a>${d?`<br>${nbH(d)}`:''}</span></li>`).join('')}</ul>`:`<p>${nbH('Список сообществ мы собираем по интервью с мамами и скоро добавим сюда.')}</p>`;
-  const days=['Пн','Вт','Ср','Чт','Пт','Сб','Вс'];
-  const rows=[['Дела','самое важное, не больше трёх'],['Отдых','хотя бы 10–30 минут'],['Желания','что хочется сделать для себя']];
-  const table=`<div class="wrap"><table><tr><th style="width:150px"></th>${days.map(d=>`<th>${d}</th>`).join('')}</tr>${rows.map(r=>`<tr><td class="rh">${r[0]}<span>${nbH(r[1])}</span></td>${days.map(()=>'<td></td>').join('')}</tr>`).join('')}</table></div>`;
   const body=sec('01','Лайфхаки для повседневных дел','',ul(life))
     +sec('02','Как разделить заботы с близкими','Забота о малыше — общая задача, а не помощь маме.',ul(share))
     +sec('03','Сообщества','Места, где можно поговорить с теми, кто проходит через то же самое.',comm)
-    +sec('04','Мини-планер для дел, отдыха и желаний','Строчки «отдых» и «желания» есть в каждом дне. Пусть даже иногда они остаются пустыми.',`<p class="week">Неделя: ______________________</p>${table}`)
     +`<div class="care"><h2>${nbH('Если тяжело уже долго')}</h2><p>${nbH('Если тебе давно не хватает сил, пропала радость или тревога не отпускает, стоит поговорить со специалистом: психологом или врачом. Это тоже забота о себе, а не слабость.')}</p></div>`;
   return docWrap('Чек-лист НТМ — немного поддержки','Немного поддержки','Собрали в одном чек-листе маленькие шаги, которые реально встроить в обычный день с малышом. Отмечай то, что получилось.',body);
 }
@@ -1217,11 +1173,11 @@ async function saveDoc(name,html,btnEl){ const st=document.getElementById('dlSta
   try{ await dl.save({filename:name,data:html}); st.textContent=t('dl_ok'); }
   catch(e){ st.textContent=e&&e.code==='declined'?t('dl_no'):t('dl_err'); } }
 document.getElementById('dlCheck').onclick=e=>saveDoc('НТМ-чек-лист.html',checklistHTML(),e.currentTarget);
-let pageOpen=null; const pages={about:$('pg-about'),stories:$('pg-stories'),planner:$('pg-planner'),contacts:$('pg-contacts')};
+let pageOpen=null; const pages={about:$('pg-about'),stories:$('pg-stories'),contacts:$('pg-contacts')};
 const navBtns=[...document.querySelectorAll('.topnav button')];
 function openPage(name){ const el=pages[name]; if(!el) return;
   Object.entries(pages).forEach(([k,p])=>{ if(k!==name){ p.classList.remove('open'); p.hidden=true; } });
-  pageOpen=name; aboutOpen=true; document.body.classList.add('page-open'); if(name==='planner'&&typeof plLoad==='function') plLoad(); el.hidden=false; el.scrollTop=0; requestAnimationFrame(()=>el.classList.add('open'));
+  pageOpen=name; aboutOpen=true; document.body.classList.add('page-open'); el.hidden=false; el.scrollTop=0; requestAnimationFrame(()=>el.classList.add('open'));
   panel.classList.add('away'); hideLabels(); brandEl.classList.add('link'); brandEl.style.opacity=1;
   navBtns.forEach(b=>b.toggleAttribute('aria-current',b.dataset.page===name)); navBtns.forEach(b=>{ if(b.dataset.page===name) b.setAttribute('aria-current','page'); }); }
 function closePage(){ if(!pageOpen) return; const el=pages[pageOpen]; pageOpen=null; aboutOpen=false; document.body.classList.remove('page-open'); el.classList.remove('open'); setTimeout(()=>{ if(!el.classList.contains('open')) el.hidden=true; },450);
@@ -1259,83 +1215,8 @@ $('storyForm').addEventListener('submit',async e=>{ e.preventDefault();
   }catch(err){ fStatus.classList.add('err'); fStatus.textContent=err&&err.code==='quota_exceeded'?nb(t('f_quota')):nb(t('f_err')); }
   fSend.disabled=false; fSend.textContent=t('f_send'); });
 
-/* ================= онлайн-планер на месяц ================= */
-const PL_ICONS=[
- {k:'self', c:'#cfdcff', p:'M12 2.8l2.6 5.7 6.2.6-4.7 4.1 1.4 6.1L12 16.1l-5.5 3.2 1.4-6.1-4.7-4.1 6.2-.6z', ru:'Время для себя', en:'Time for myself'},
- {k:'people', c:'#ffc9d6', p:'M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z', ru:'Встреча, близкие', en:'Friends & family'},
- {k:'create', c:'#ffe2b0', p:'M4 20l1-4.2L15.6 5.2a2 2 0 0 1 2.8 0l.4.4a2 2 0 0 1 0 2.8L8.2 19zM13.5 7.3l3.2 3.2', ru:'Творчество', en:'Creativity'},
- {k:'rest', c:'#c6b8ff', p:'M19.5 14.5A8 8 0 1 1 9.5 4.5a6.3 6.3 0 0 0 10 10z', ru:'Отдых', en:'Rest'},
- {k:'task', c:'#b8f0dc', p:'M4.5 12.5l4.5 4.5L19.5 6.5', ru:'Важное дело', en:'Important task'},
- {k:'wish', c:'#fff4c2', p:'M12 3c.6 4.3 1.7 5.4 6 6-4.3.6-5.4 1.7-6 6-.6-4.3-1.7-5.4-6-6 4.3-.6 5.4-1.7 6-6zM18.5 15.5c.3 1.8.7 2.2 2.5 2.5-1.8.3-2.2.7-2.5 2.5-.3-1.8-.7-2.2-2.5-2.5 1.8-.3 2.2-.7 2.5-2.5z', ru:'Желание', en:'Wish'}];
-const PLT={ru:{sel:'Выбери день в календаре',note:'Заметка на день',notePh:'Например: прогулка с подругой в 12:00',wish:'Чего я хочу в этом месяце',wishPh:'Пара строк для себя',
-   count:n=>n?`Звёзд «время для себя» в этом месяце: ${n}`:'Пока ни одной звезды «время для себя». Пусть первая появится, когда получится.',
-   saved:'Сохранено',savedLocal:'Сохранено в этом браузере',csv:'Таблица для Google Таблиц и Excel',md:'Файл для Notion и Obsidian',copy:'Скопировать для Заметок',copied:'Скопировано. Вставь в Заметки или любое приложение.',
-   prev:'Предыдущий месяц',nextM:'Следующий месяц',dl_na:'Скачивание работает, когда страница открыта в claude.ai.',dl_ok:'Файл сохранён.',dl_err:'Не получилось сохранить файл.',empty:'В этом месяце пока нет отметок.',today:'сегодня'},
- en:{sel:'Pick a day in the calendar',note:'Note for the day',notePh:'For example: a walk with a friend at noon',wish:'What I want this month',wishPh:'A couple of lines for yourself',
-   count:n=>n?`“Time for myself” stars this month: ${n}`:'No “time for myself” stars yet. Let the first one appear when it can.',
-   saved:'Saved',savedLocal:'Saved in this browser',csv:'Spreadsheet for Google Sheets and Excel',md:'File for Notion and Obsidian',copy:'Copy for Notes',copied:'Copied. Paste it into Notes or any app.',
-   prev:'Previous month',nextM:'Next month',dl_na:'Downloads work when the page is open in claude.ai.',dl_ok:'File saved.',dl_err:'Couldn’t save the file.',empty:'No marks this month yet.',today:'today'}};
-const pt=k=>PLT[lang][k];
-const svgIcon=(ic,cls='')=>`<svg class="pi ${cls}" viewBox="0 0 24 24" aria-hidden="true" style="--ic:${ic.c}"><path d="${ic.p}"/></svg>`;
-const now=new Date(); let plY=now.getFullYear(), plM=now.getMonth(), plSel=now.getDate(), plData={days:{},wish:''}, plUid=null, plDb=null, plTimer=null, plSaving=false, plDirty=false;
-const pad2=n=>String(n).padStart(2,'0'), plKey=()=>`planner-${plY}-${pad2(plM+1)}`;
-(async()=>{ try{ plDb=window.claude?.use?await window.claude.use('db'):null; const u=window.claude?.use?await window.claude.use('user'):null; plUid=u?await u.id():null; }catch(e){} if(pageOpen==='planner') plLoad(); })();
-function plLocalGet(){ try{ return JSON.parse(localStorage.getItem('ntm-'+plKey())||'null'); }catch(e){ return null; } }
-function plLocalSet(){ try{ localStorage.setItem('ntm-'+plKey(),JSON.stringify(plData)); return true; }catch(e){ return false; } }
-let plVer=0;
-async function plLoad(){ const key=plKey(), ver=++plVer; plData=plLocalGet()||{days:{},wish:''}; renderPlanner();
-  if(plDb&&plUid){ try{ const d=await plDb.doc(`data/users/${plUid}/${key}`).get(); if(ver===plVer&&key===plKey()&&d.exists){ const v=JSON.parse(JSON.stringify(d.data())); plData={days:v.days||{},wish:v.wish||''}; plLocalSet(); renderPlanner(); } }catch(e){} } }
-function plSave(){ plVer++; plDirty=true; clearTimeout(plTimer); plTimer=setTimeout(plFlush,700); }
-async function plFlush(){ if(plSaving||!plDirty) return; plDirty=false; plSaving=true; const st=$('plSaved'); const key=plKey(), body=JSON.parse(JSON.stringify(plData));
-  plLocalSet(); let ok=false;
-  if(plDb&&plUid){ try{ await plDb.doc(`data/users/${plUid}/${key}`).set(body); ok=true; }catch(e){ ok=false; } }
-  st.textContent=ok?pt('saved'):pt('savedLocal'); st.classList.add('on'); setTimeout(()=>st.classList.remove('on'),1600);
-  plSaving=false; if(plDirty) plFlush(); }
-function monthName(){ const s=new Date(plY,plM,1).toLocaleDateString(lang==='en'?'en-GB':'ru-RU',{month:'long',year:'numeric'}).replace(' г.',''); return s.charAt(0).toUpperCase()+s.slice(1); }
-function renderPlanner(){
-  $('plMonth').textContent=monthName(); $('plPrev').setAttribute('aria-label',pt('prev')); $('plNext').setAttribute('aria-label',pt('nextM'));
-  $('plLegend').innerHTML=PL_ICONS.map(ic=>`<span>${svgIcon(ic)}${ic[lang]}</span>`).join('');
-  const wd=lang==='en'?['Mon','Tue','Wed','Thu','Fri','Sat','Sun']:['Пн','Вт','Ср','Чт','Пт','Сб','Вс'];
-  const first=(new Date(plY,plM,1).getDay()+6)%7, days=new Date(plY,plM+1,0).getDate();
-  const isNow=(d)=>plY===now.getFullYear()&&plM===now.getMonth()&&d===now.getDate();
-  let h=wd.map(w=>`<div class="pl-wd">${w}</div>`).join('')+'<div class="pl-pad"></div>'.repeat(first);
-  for(let d=1;d<=days;d++){ const e=plData.days[d]||{}; const ics=(e.icons||[]).map(k=>PL_ICONS.find(i=>i.k===k)).filter(Boolean);
-    h+=`<button type="button" class="pl-day${d===plSel?' sel':''}${isNow(d)?' now':''}${e.note?' has-note':''}" data-d="${d}" aria-pressed="${d===plSel}"><span class="pl-n">${d}</span><span class="pl-ics">${ics.map(ic=>svgIcon(ic)).join('')}</span></button>`; }
-  $('plGrid').innerHTML=h;
-  $('plGrid').querySelectorAll('.pl-day').forEach(b=>b.addEventListener('click',ev=>{ ev.preventDefault(); plSel=+b.dataset.d; renderPlanner(); }));
-  const e=plData.days[plSel]||{icons:[],note:''};
-  const date=new Date(plY,plM,plSel).toLocaleDateString(lang==='en'?'en-GB':'ru-RU',{weekday:'long',day:'numeric',month:'long'});
-  $('plDayTitle').textContent=(isNow(plSel)?pt('today')+', ':'')+date;
-  $('plToggles').innerHTML=PL_ICONS.map(ic=>`<button type="button" class="pl-tg${(e.icons||[]).includes(ic.k)?' on':''}" data-k="${ic.k}" aria-pressed="${(e.icons||[]).includes(ic.k)}">${svgIcon(ic)}<span>${ic[lang]}</span></button>`).join('');
-  $('plToggles').querySelectorAll('.pl-tg').forEach(b=>b.addEventListener('click',ev=>{ ev.preventDefault(); ev.stopPropagation(); const cur=Object.assign({icons:[],note:''},plData.days[plSel]); plData.days=Object.assign({},plData.days); const s2=new Set(cur.icons||[]);
-    s2.has(b.dataset.k)?s2.delete(b.dataset.k):s2.add(b.dataset.k); cur.icons=PL_ICONS.map(i=>i.k).filter(k=>s2.has(k)); plData.days[plSel]=cur; plSave(); renderPlanner(); }));
-  $('plNoteLbl').textContent=pt('note'); const n=$('plNote'); n.placeholder=pt('notePh'); if(document.activeElement!==n) n.value=e.note||'';
-  $('plWishLbl').textContent=pt('wish'); const w=$('plWish'); w.placeholder=pt('wishPh'); if(document.activeElement!==w) w.value=plData.wish||'';
-  const cnt=Object.values(plData.days).filter(x=>(x.icons||[]).includes('self')).length; $('plCount').textContent=nb(pt('count')(cnt));
-  $('plCsv').querySelector('span').textContent=pt('csv'); $('plMd').querySelector('span').textContent=pt('md'); $('plCopy').querySelector('span').textContent=pt('copy');
-}
-$('plNote').addEventListener('input',e=>{ const cur=Object.assign({icons:[],note:''},plData.days[plSel]); plData.days=Object.assign({},plData.days); cur.note=e.target.value.slice(0,400); plData.days[plSel]=cur; plSave();
-  const b=$('plGrid').querySelector(`.pl-day[data-d="${plSel}"]`); if(b) b.classList.toggle('has-note',!!cur.note); });
-$('plWish').addEventListener('input',e=>{ plData=Object.assign({},plData); plData.wish=e.target.value.slice(0,800); plSave(); });
-$('plPrev').onclick=()=>{ plFlush(); plM--; if(plM<0){ plM=11; plY--; } plSel=1; plLoad(); };
-$('plNext').onclick=()=>{ plFlush(); plM++; if(plM>11){ plM=0; plY++; } plSel=1; plLoad(); };
-function plRows(){ const days=new Date(plY,plM+1,0).getDate(), out=[]; for(let d=1;d<=days;d++){ const e=plData.days[d]; if(!e||(!(e.icons||[]).length&&!e.note)) continue;
-  out.push({date:`${plY}-${pad2(plM+1)}-${pad2(d)}`,label:new Date(plY,plM,d).toLocaleDateString(lang==='en'?'en-GB':'ru-RU',{day:'numeric',month:'long'}),icons:(e.icons||[]).map(k=>PL_ICONS.find(i=>i.k===k)[lang]),note:e.note||''}); } return out; }
-const SYM={self:'★',people:'♥',create:'✎',rest:'☾',task:'✓',wish:'✦'};
-function plText(){ const r=plRows(); const head=`${monthName()}${plData.wish?`\n${pt('wish')}: ${plData.wish}`:''}\n`;
-  return head+(r.length?r.map(x=>`${x.label} — ${x.icons.join(', ')}${x.note?` — ${x.note}`:''}`).join('\n'):pt('empty')); }
-async function plDownload(name,data){ const st=$('plExpSt'); if(!dl){ st.textContent=STANDALONE&&blobSave(name,data)?pt('dl_ok'):pt('dl_na'); return; }
-  try{ await dl.save({filename:name,data}); st.textContent=pt('dl_ok'); }catch(e){ st.textContent=e&&e.code==='declined'?'':pt('dl_err'); } }
-$('plCsv').onclick=()=>{ const q=v=>`"${String(v).replace(/"/g,'""')}"`; const hdr=lang==='en'?['Date','Marks','Note']:['Дата','Отметки','Заметка'];
-  const rows=plRows().map(x=>[x.date,x.icons.join('; '),x.note].map(q).join(','));
-  plDownload(`НТМ-планер-${plY}-${pad2(plM+1)}.csv`,'﻿'+[hdr.map(q).join(','),...rows].join('\n')); };
-$('plMd').onclick=()=>{ const r=plRows(); const md=`# ${monthName()}\n\n${plData.wish?`**${pt('wish')}:** ${plData.wish}\n\n`:''}`+(r.length?r.map(x=>`- **${x.label}** — ${x.icons.join(', ')}${x.note?` — ${x.note}`:''}`).join('\n'):pt('empty'))+'\n';
-  plDownload(`НТМ-планер-${plY}-${pad2(plM+1)}.md`,md); };
-$('plCopy').onclick=async()=>{ const txt=plText(), st=$('plExpSt'); try{ await navigator.clipboard.writeText(txt); st.textContent=pt('copied'); }
-  catch(e){ const ta=$('plCopyBox'); ta.hidden=false; ta.value=txt; ta.select(); st.textContent=pt('copied'); } };
-
 /* ================= переключение языка ================= */
-const EN_STATIC={"не только мама": "not just a mom", "Интерактивная история о том, кем остаётся женщина, когда становится мамой": "An interactive story about who a woman remains when she becomes a mother", "Слушать со звуком": "Listen with sound", "О проекте": "About", "Истории": "Stories", "Контакты": "Contacts", "Ты мама, и это важная часть тебя. Но не единственная.": "You’re a mom, and that’s an important part of you. But not the only one.", "«НТМ — не только мама» — студенческий спецпроект о том, как после рождения ребёнка жизнь женщины начинают видеть прежде всего через материнство.": "“НТМ — not just a mom” is a student project about how, once a baby is born, a woman’s life starts to be seen mainly through motherhood.", "идея": "idea", "как читать комнату": "how to read the room", "немного поддержки": "a little support", "чей это проект": "whose project this is", "Мы перенесли это ощущение в пространство одной комнаты. Сначала в ней освещена только люлька, ведь материнство занимает всё поле внимания. По ходу истории свет возвращается к другим частям комнаты, и вместе с предметами проявляются интересы, отношения и желания героини.": "We turned this feeling into a single room. At first only the cradle is lit, because motherhood takes up all the attention. As the story goes on, light returns to other parts of the room, and with the objects the heroine’s interests, relationships and wishes come into view.", "Комната матери не создаётся заново. Она всё это время была её пространством, просто многие его части оставались в темноте.": "The mother’s room isn’t built from scratch. It was her space all along; many parts of it were simply left in the dark.", "Комната": "Room", "Внутренний мир героини. Всё, что в ней есть, было там всегда.": "The heroine’s inner world. Everything in it has always been there.", "Люлька": "Cradle", "Роль мамы. Она светится с первого кадра и не гаснет до конца, что бы ты ни выбрала.": "The role of a mother. It glows from the first frame and never goes out, whatever you choose.", "Предметы": "Objects", "Части личности: подруги, творчество, увлечения, работа.": "Parts of who she is: friends, creativity, hobbies, work.", "Гирлянда": "Garland", "Внимание. Одна нить проходит через всю комнату и связывает эти части между собой.": "Attention. One string runs through the whole room and connects these parts.", "Свет": "Light", "Момент, когда часть себя снова становится видна.": "The moment a part of yourself becomes visible again.", "Темнота": "Darkness", "Не потеря. То, что в темноте, никуда не делось, просто пока осталось незамеченным.": "Not a loss. What is in the dark hasn’t gone anywhere; it just hasn’t been noticed yet.", "Дождь и снег": "Rain and snow", "Время, которое проходит, пока свет в окне продолжает гореть.": "Time passing while the light in the window stays on.", "Окна соседних домов": "Neighbouring windows", "Другие женщины. У каждой своя комната и свой свет.": "Other women. Each has her own room and her own light.", "Немного поддержки": "A little support", "Если сейчас на себя почти не остаётся времени, это нормально и не значит, что ты что-то делаешь не так. Мы не будем советовать «просто найти время на себя». Вместо этого собрали в одном чек-листе:": "If there’s almost no time left for yourself right now, that’s normal, and it doesn’t mean you’re doing something wrong. We won’t tell you to “just find time for yourself”. Instead, we’ve gathered in one checklist:", "Лайфхаки для повседневных дел": "Everyday life hacks", "Идеи, как разделить заботы с близкими": "Ideas for sharing the care with loved ones", "Ссылки на сообщества": "Links to communities", "Мини-планер для дел, отдыха и желаний": "A mini planner for tasks, rest and wishes", "Чек-лист": "Checklist", "Всё из списка в одном файле. Можно открыть на телефоне или распечатать и отмечать галочками.": "Everything from the list in one file, in Russian for now. Open it on your phone or print it and tick things off.", "Скачать": "Download", "Скачивание работает, когда страница открыта в claude.ai.": "Downloads work when the page is open in claude.ai.", "Если тяжело уже долго, пропали силы и радость или тревога не отпускает, поговори со специалистом: психологом или врачом. Это тоже забота о себе.": "If things have been hard for a long time, your energy and joy are gone or anxiety won’t let go, talk to a specialist: a psychologist or a doctor. That’s caring for yourself too.", "Проект сделали студентки HSE Design: Елисеева Василиса, Пупкова Анастасия и Фоменко Анастасия. Программа «Дизайн и продвижение цифрового продукта», 2026.": "Made by HSE Design students Vasilisa Eliseeva, Anastasia Fomenko and Anastasia Pupkova. Digital Product Design and Promotion programme, 2026.", "Пройти историю Ани": "Go through Anya’s story", "Все истории": "All stories", "За каждым окном своя комната и свой свет": "Behind every window there’s a room and a light of its own", "Пока открыта одна история. Остальные мы пишем по интервью с мамами.": "One story is open so far. We’re writing the others based on interviews with mothers.", "Анина душа": "Anya’s soul", "Дашина душа": "Dasha’s soul", "твоя душа": "your soul", "Аня": "Anya", "Даша": "Dasha", "Твоя история": "Your story", "Год назад у неё родилась дочь. В комнате остались фото с подругами, тетрадь с рассказами и коньки у зеркала.": "Her daughter was born a year ago. Her room still holds photos with friends, a notebook of stories and skates by the mirror.", "Её история пока пишется. Совсем скоро здесь можно будет заглянуть в её комнату.": "Her story is still being written. Soon you’ll be able to look into her room here.", "Если хочешь, чтобы следующее окно было твоим, расскажи нам свою историю.": "If you want the next window to be yours, tell us your story.", "Заглянуть в окно": "Look into the window", "Скоро": "Soon", "Рассказать историю": "Share your story", "Расскажи свою историю": "Tell us your story", "Следующее окно на улице может быть твоим. Напиши, что изменилось после рождения ребёнка, по чему ты скучаешь и что помогает. Мы прочитаем каждую историю.": "The next window on the street could be yours. Write about what changed after your baby was born, what you miss and what helps. We’ll read every story.", "Как тебя зовут": "Your name", "необязательно": "optional", "Как с тобой связаться": "How to reach you", "почта или телеграм, необязательно": "email or Telegram, optional", "Я согласна, что авторы проекта прочитают мою историю и могут рассказать её на сайте без моего имени.": "I agree that the authors of the project will read my story and may share it on the site without my name.", "Отправить историю": "Send your story", "авторы": "authors", "где": "where", "Студенческий спецпроект HSE Design, программа «Дизайн и продвижение цифрового продукта», 2026": "Student project, HSE Design, Digital Product Design and Promotion programme, 2026", "почта": "email", "Планер": "Planner", "Мой месяц": "My month", "Отмечай значками, что было в каждом дне: время для себя, встречи, отдых. Всё сохраняется само, а потом это можно перенести в Заметки, Google Таблицы или Notion.": "Mark each day with icons: time for yourself, meetups, rest. Everything saves on its own, and later you can move it to Notes, Google Sheets or Notion.", "перенести в приложение": "move to an app", "Таблицу можно открыть в Google Таблицах, Excel или Numbers. Текст вставляется в Заметки на телефоне, в Notion или в мессенджер.": "The spreadsheet opens in Google Sheets, Excel or Numbers. The text can be pasted into Notes on your phone, into Notion or a messenger.", "Открыть онлайн-планер на месяц": "Open the online monthly planner"};
+const EN_STATIC={"не только мама": "not just a mom", "Интерактивная история о том, кем остаётся женщина, когда становится мамой": "An interactive story about who a woman remains when she becomes a mother", "Слушать со звуком": "Listen with sound", "О проекте": "About", "Истории": "Stories", "Контакты": "Contacts", "Ты мама, и это важная часть тебя. Но не единственная.": "You’re a mom, and that’s an important part of you. But not the only one.", "«НТМ — не только мама» — студенческий спецпроект о том, как после рождения ребёнка жизнь женщины начинают видеть прежде всего через материнство.": "“НТМ — not just a mom” is a student project about how, once a baby is born, a woman’s life starts to be seen mainly through motherhood.", "идея": "idea", "как читать комнату": "how to read the room", "немного поддержки": "a little support", "чей это проект": "whose project this is", "Мы перенесли это ощущение в пространство одной комнаты. Сначала в ней освещена только люлька, ведь материнство занимает всё поле внимания. По ходу истории свет возвращается к другим частям комнаты, и вместе с предметами проявляются интересы, отношения и желания героини.": "We turned this feeling into a single room. At first only the cradle is lit, because motherhood takes up all the attention. As the story goes on, light returns to other parts of the room, and with the objects the heroine’s interests, relationships and wishes come into view.", "Комната матери не создаётся заново. Она всё это время была её пространством, просто многие его части оставались в темноте.": "The mother’s room isn’t built from scratch. It was her space all along; many parts of it were simply left in the dark.", "Комната": "Room", "Внутренний мир героини. Всё, что в ней есть, было там всегда.": "The heroine’s inner world. Everything in it has always been there.", "Люлька": "Cradle", "Роль мамы. Она светится с первого кадра и не гаснет до конца, что бы ты ни выбрала.": "The role of a mother. It glows from the first frame and never goes out, whatever you choose.", "Предметы": "Objects", "Части личности: подруги, творчество, увлечения, работа.": "Parts of who she is: friends, creativity, hobbies, work.", "Гирлянда": "Garland", "Внимание. Одна нить проходит через всю комнату и связывает эти части между собой.": "Attention. One string runs through the whole room and connects these parts.", "Свет": "Light", "Момент, когда часть себя снова становится видна.": "The moment a part of yourself becomes visible again.", "Темнота": "Darkness", "Не потеря. То, что в темноте, никуда не делось, просто пока осталось незамеченным.": "Not a loss. What is in the dark hasn’t gone anywhere; it just hasn’t been noticed yet.", "Дождь и снег": "Rain and snow", "Время, которое проходит, пока свет в окне продолжает гореть.": "Time passing while the light in the window stays on.", "Окна соседних домов": "Neighbouring windows", "Другие женщины. У каждой своя комната и свой свет.": "Other women. Each has her own room and her own light.", "Немного поддержки": "A little support", "Если сейчас на себя почти не остаётся времени, это нормально и не значит, что ты что-то делаешь не так. Мы не будем советовать «просто найти время на себя». Вместо этого собрали в одном чек-листе:": "If there’s almost no time left for yourself right now, that’s normal, and it doesn’t mean you’re doing something wrong. We won’t tell you to “just find time for yourself”. Instead, we’ve gathered in one checklist:", "Лайфхаки для повседневных дел": "Everyday life hacks", "Идеи, как разделить заботы с близкими": "Ideas for sharing the care with loved ones", "Ссылки на сообщества": "Links to communities", "Чек-лист": "Checklist", "Всё из списка в одном файле. Можно открыть на телефоне или распечатать и отмечать галочками.": "Everything from the list in one file, in Russian for now. Open it on your phone or print it and tick things off.", "Скачать": "Download", "Скачивание работает, когда страница открыта в claude.ai.": "Downloads work when the page is open in claude.ai.", "Если тяжело уже долго, пропали силы и радость или тревога не отпускает, поговори со специалистом: психологом или врачом. Это тоже забота о себе.": "If things have been hard for a long time, your energy and joy are gone or anxiety won’t let go, talk to a specialist: a psychologist or a doctor. That’s caring for yourself too.", "Проект сделали студентки HSE Design: Елисеева Василиса, Пупкова Анастасия и Фоменко Анастасия. Программа «Дизайн и продвижение цифрового продукта», 2026.": "Made by HSE Design students Vasilisa Eliseeva, Anastasia Fomenko and Anastasia Pupkova. Digital Product Design and Promotion programme, 2026.", "Пройти историю Ани": "Go through Anya’s story", "Все истории": "All stories", "За каждым окном своя комната и свой свет": "Behind every window there’s a room and a light of its own", "Пока открыта одна история. Остальные мы пишем по интервью с мамами.": "One story is open so far. We’re writing the others based on interviews with mothers.", "Анина душа": "Anya’s soul", "Дашина душа": "Dasha’s soul", "твоя душа": "your soul", "Аня": "Anya", "Даша": "Dasha", "Твоя история": "Your story", "Год назад у неё родилась дочь. В комнате остались фото с подругами, тетрадь с рассказами и коньки у зеркала.": "Her daughter was born a year ago. Her room still holds photos with friends, a notebook of stories and skates by the mirror.", "Её история пока пишется. Совсем скоро здесь можно будет заглянуть в её комнату.": "Her story is still being written. Soon you’ll be able to look into her room here.", "Если хочешь, чтобы следующее окно было твоим, расскажи нам свою историю.": "If you want the next window to be yours, tell us your story.", "Заглянуть в окно": "Look into the window", "Скоро": "Soon", "Рассказать историю": "Share your story", "Расскажи свою историю": "Tell us your story", "Следующее окно на улице может быть твоим. Напиши, что изменилось после рождения ребёнка, по чему ты скучаешь и что помогает. Мы прочитаем каждую историю.": "The next window on the street could be yours. Write about what changed after your baby was born, what you miss and what helps. We’ll read every story.", "Как тебя зовут": "Your name", "необязательно": "optional", "Как с тобой связаться": "How to reach you", "почта или телеграм, необязательно": "email or Telegram, optional", "Я согласна, что авторы проекта прочитают мою историю и могут рассказать её на сайте без моего имени.": "I agree that the authors of the project will read my story and may share it on the site without my name.", "Отправить историю": "Send your story", "авторы": "authors", "где": "where", "Студенческий спецпроект HSE Design, программа «Дизайн и продвижение цифрового продукта», 2026": "Student project, HSE Design, Digital Product Design and Promotion programme, 2026", "почта": "email", "Планер": "Planner", "Мой месяц": "My month", "Отмечай значками, что было в каждом дне: время для себя, встречи, отдых. Всё сохраняется само, а потом это можно перенести в Заметки, Google Таблицы или Notion.": "Mark each day with icons: time for yourself, meetups, rest. Everything saves on its own, and later you can move it to Notes, Google Sheets or Notion.", "перенести в приложение": "move to an app", "Таблицу можно открыть в Google Таблицах, Excel или Numbers. Текст вставляется в Заметки на телефоне, в Notion или в мессенджер.": "The spreadsheet opens in Google Sheets, Excel or Numbers. The text can be pasted into Notes on your phone, into Notion or a messenger.", "Открыть онлайн-планер на месяц": "Open the online monthly planner"};
 const normK=x=>x.replace(/[\u00a0\u2011]/g,m=>m==='\u2011'?'-':' ').replace(/\s+/g,' ').trim();
 const i18nEls=[];
 document.querySelectorAll('#title *, .topnav *, .pg *, .brand .ntm').forEach(el=>{ if(el.children.length||/^(SCRIPT|STYLE|svg|path|INPUT|TEXTAREA)$/i.test(el.tagName)) return;
@@ -1347,11 +1228,11 @@ function applyLang(){
   document.documentElement.lang=lang;
   i18nEls.forEach(o=>{ o.el.textContent=lang==='en'?o.en:(o.nb?nb(o.ru):o.ru); });
   $('ctAuthors').innerHTML=AUTH[lang]; $('fStory').placeholder=PH[lang];
-  document.querySelectorAll('.soul').forEach((b,i)=>{ b.querySelector('.soul-name').textContent=nb(t(i?'soulD':'soulA')); b.querySelector('.soul-hint').textContent=t('soulHint'); });
+  document.querySelectorAll('.soul').forEach((b,i)=>{ b.querySelector('.soul-name').textContent=nb(t(['soulA','soulD','soulY'][i])); b.querySelector('.soul-hint').textContent=t(i===2?'soulYHint':'soulHint'); });
   hintTxt.textContent=t(curHint); sndLbl.textContent=Snd.on?t('snd_on'):t('snd_off'); fSend.textContent=t('f_send');
   langBtn.textContent=t('langBtn'); menuBtn.setAttribute('aria-label',lang==='en'?'Menu':'Меню'); langBtn.setAttribute('aria-label',t('langAria'));
 }
-langBtn.onclick=()=>{ lang=lang==='ru'?'en':'ru'; try{ localStorage.setItem('ntm-lang',lang); }catch(e){} applyLang(); if(lastFill) show(lastFill); if(pageOpen==='planner') renderPlanner(); };
+langBtn.onclick=()=>{ lang=lang==='ru'?'en':'ru'; try{ localStorage.setItem('ntm-lang',lang); }catch(e){} applyLang(); if(lastFill) show(lastFill); };
 applyLang();
 /* мобильное меню */
 function setMenu(o){ document.body.classList.toggle('menu-open',o); menuBtn.setAttribute('aria-expanded',o); }
